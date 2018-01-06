@@ -1,0 +1,208 @@
+<head>
+    <title>Samson Close</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #F4F4F4;
+        }
+
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 70px;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            text-align: center;
+
+            margin-top: 0.8em;
+            margin-bottom: -0.4em;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .title {
+            animation: fadeTitle 1.3s ease;
+            margin-top: 0.2em;
+            margin-bottom: -0.2em;
+        }
+
+        .rest {
+            position: relative;
+            animation: fadeRest 1.3s ease;
+        }
+
+        @keyframes fadeTitle {
+            0% {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeRest {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: black;
+        }
+
+        .line {
+            border-bottom: 2px solid #ddd;
+        }
+
+        .github {
+            position: absolute;
+            top: -2px
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Center website */
+
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .row {
+            margin: 8px -16px;
+        }
+
+        /* Add padding BETWEEN each column */
+
+        .row,
+        .row>.column {
+            padding: 8px;
+        }
+
+        /* Create four equal columns that floats next to each other */
+
+        .column {
+            float: left;
+            width: 33.333%;
+        }
+
+        /* Clear floats after rows */
+
+        .row:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+
+        .content {
+            background-color: white;
+            padding: 10px;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+
+        @media (max-width: 900px) {
+            .column {
+                width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+        @media (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class='main'>
+        <h1 class='title'>Samson Close</h1>
+        <div class='rest'>
+            <a href='https://github.com/qwertysam'>
+                <img class='github' width='32' height='32' src='https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg' />
+            </a>
+
+            <p>Enjoy some fun games!</p>
+
+            <div class='line'></div>
+
+            <div class='row'>
+                <div class='column'>
+                    <a href='https://www.samsonclose.me/space/'>
+                        <div class='content'>
+                            <img src='/images/space-territory.png' width='100%'>
+                            <h3>Solar Colony</h3>
+                            <p>A WIP 1v1 multiplayer space colonization game.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class='column'>
+                    <a href='https://www.samsonclose.me/shooty/'>
+                        <div class='content'>
+                            <img src='/images/shooty.png' width='100%'>
+                            <h3>Shooty</h3>
+                            <p>Multiplayer competitive keyboard reflex game! Play online or offline.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class='column'>
+                    <a href='https://www.samsonclose.me/space-game/'>
+                        <div class='content'>
+                            <img src='/images/spage-game.png' width='100%'>
+                            <h3>Space Game</h3>
+                            <p>An unfinished and abandoned space-game made in Phaser.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class='line'></div>
+
+            <p>More to come in the future!</p>
+        </div>
+    </div>
+</body>
