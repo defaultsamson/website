@@ -1,161 +1,161 @@
 <head>
 	<title>Samson Close</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-
 	<style>
-		body {
-			margin: 0;
-			padding: 20px;
-			background-color: #F4F4F4;
+	body {
+		margin: 0;
+		padding: 20px;
+		background-color: #F4F4F4;
+	}
+
+	h1 {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		font-size: 70px;
+		text-align: center;
+	}
+
+	h3 {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 24px;
+		text-align: center;
+
+		margin-top: 0.8em;
+		margin-bottom: -0.4em;
+	}
+
+	p {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.title {
+		animation: fadeTitle 1.3s ease;
+		margin-top: 0.2em;
+		margin-bottom: -0.2em;
+	}
+
+	.rest {
+		position: relative;
+		animation: fadeRest 1.3s ease;
+	}
+
+	@keyframes fadeTitle {
+		0% {
+			opacity: 0;
+			transform: translateY(-40px);
 		}
-
-		h1 {
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 300;
-			font-size: 70px;
-			text-align: center;
+		100% {
+			opacity: 1;
+			transform: translateY(0);
 		}
+	}
 
-		h3 {
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 400;
-			font-size: 24px;
-			text-align: center;
-
-			margin-top: 0.8em;
-			margin-bottom: -0.4em;
+	@keyframes fadeRest {
+		0% {
+			opacity: 0;
+			transform: translateY(-20px);
 		}
-
-		p {
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 300;
-			font-size: 20px;
-			text-align: center;
+		100% {
+			opacity: 1;
+			transform: translateY(0);
 		}
+	}
 
-		.title {
-			animation: fadeTitle 1.3s ease;
-			margin-top: 0.2em;
-			margin-bottom: -0.2em;
-		}
+	a:link {
+		text-decoration: none;
+		color: black;
+	}
 
-		.rest {
-			position: relative;
-			animation: fadeRest 1.3s ease;
-		}
+	a:visited {
+		text-decoration: none;
+		color: black;
+	}
 
-		@keyframes fadeTitle {
-			0% {
-				opacity: 0;
-				transform: translateY(-40px);
-			}
-			100% {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
+	a:hover {
+		text-decoration: none;
+		color: black;
+	}
 
-		@keyframes fadeRest {
-			0% {
-				opacity: 0;
-				transform: translateY(-20px);
-			}
-			100% {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
+	a:active {
+		text-decoration: none;
+		color: black;
+	}
 
-		a:link {
-			text-decoration: none;
-			color: black;
-		}
+	.line {
+		border-bottom: 2px solid #ddd;
+	}
 
-		a:visited {
-			text-decoration: none;
-			color: black;
-		}
+	.github {
+		width: 24;
+		height: 24;
+		top: 3px;
+		left: 3px;
+		position: relative;
+	}
 
-		a:hover {
-			text-decoration: none;
-			color: black;
-		}
+	#mainGithub {
+		width: 32;
+		height: 32;
+		position: absolute;
+		top: -2px;
+	}
 
-		a:active {
-			text-decoration: none;
-			color: black;
-		}
+	* {
+		box-sizing: border-box;
+	}
+	/* Center website */
 
-		.line {
-			border-bottom: 2px solid #ddd;
-		}
+	.main {
+		max-width: 1000px;
+		margin: auto;
+	}
 
-		.github {
-			position: absolute;
-			top: -2px;
-			width: 32;
-			height: 32
-		}
+	.row {
+		margin: 8px -16px;
+	}
+	/* Add padding BETWEEN each column */
 
-		* {
-			box-sizing: border-box;
-		}
+	.row,
+	.row>.column {
+		padding: 8px;
+	}
+	/* Create four equal columns that floats next to each other */
 
-		/* Center website */
+	.column {
+		float: left;
+		width: 33.333%;
+	}
+	/* Clear floats after rows */
 
-		.main {
-			max-width: 1000px;
-			margin: auto;
-		}
+	.row:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	/* Content */
 
-		.row {
-			margin: 8px -16px;
-		}
+	.content {
+		background-color: white;
+		padding: 10px;
+	}
+	/* Responsive layout - makes a two column-layout instead of four columns */
 
-		/* Add padding BETWEEN each column */
-
-		.row,
-		.row>.column {
-			padding: 8px;
-		}
-
-		/* Create four equal columns that floats next to each other */
-
+	@media (max-width: 900px) {
 		.column {
-			float: left;
-			width: 33.333%;
+			width: 50%;
 		}
+	}
+	/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
-		/* Clear floats after rows */
-
-		.row:after {
-			content: '';
-			display: table;
-			clear: both;
+	@media (max-width: 600px) {
+		.column {
+			width: 100%;
 		}
-
-		/* Content */
-
-		.content {
-			background-color: white;
-			padding: 10px;
-		}
-
-		/* Responsive layout - makes a two column-layout instead of four columns */
-
-		@media (max-width: 900px) {
-			.column {
-				width: 50%;
-			}
-		}
-
-		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-
-		@media (max-width: 600px) {
-			.column {
-				width: 100%;
-			}
-		}
+	}
 
 	</style>
 </head>
@@ -165,45 +165,40 @@
 		<h1 class='title'>Samson Close</h1>
 		<div class='rest'>
 			<a href='https://github.com/qwertysam'>
-				<img class='github' src='/images/github.svg'>
+				<img id='mainGithub' src='/images/github.svg'>
 			</a>
-
 			<p>Enjoy some fun projects!</p>
-
 			<div class='line'></div>
-
 			<div class='row'>
 				<div class='column'>
-					<a href='https://www.samsonclose.me/math/'>
-						<div class='content'>
+					<div class='content'>
+						<a href='https://www.samsonclose.me/math/'>
 							<img src='/images/math.png' width='100%'>
-							<h3>LaTeX Editor</h3>
-							<p>A simple and easy online LaTeX editor. Just start typing.</p>
-						</div>
-					</a>
+						</a>
+						<h3>LaTeX Editor <a href='https://github.com/qwertysam/math-website'><img class='github' src='./images/github.svg'></a></h3>
+						<p>A simple and easy online LaTeX editor. Just start typing.</p>
+					</div>
 				</div>
 				<div class='column'>
-					<a href='https://www.samsonclose.me/shooty/'>
-						<div class='content'>
+					<div class='content'>
+						<a href='https://www.samsonclose.me/shooty/'>
 							<img src='/images/shooty.png' width='100%'>
-							<h3>Shooty</h3>
-							<p>Multiplayer keyboard reflex game! Play online or locally.</p>
-						</div>
-					</a>
+						</a>
+						<h3>Shooty <a href='https://github.com/qwertysam/shooty-game'><img class='github' src='./images/github.svg'></a></h3>
+						<p>Multiplayer keyboard reflex game! Play online or locally.</p>
+					</div>
 				</div>
 				<div class='column'>
-					<a href='https://www.samsonclose.me/prototypes/'>
-						<div class='content'>
+					<div class='content'>
+						<a href='https://www.samsonclose.me/prototypes/'>
 							<img src='/images/prototype.png' width='100%'>
-							<h3>Prototypes</h3>
-							<p>Unpolished or unfinished projects.</p>
-						</div>
-					</a>
+						</a>
+						<h3>Prototypes</h3>
+						<p>Unpolished or unfinished projects.</p>
+					</div>
 				</div>
 			</div>
-
 			<div class='line'></div>
-
 			<p>More to come in the future!</p>
 		</div>
 	</div>
