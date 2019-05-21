@@ -30,6 +30,29 @@
 		font-weight: 300;
 		font-size: 20px;
 		text-align: center;
+		margin-bottom: 8px;
+	}
+
+	.date {
+		font-weight: 500;
+		font-size: 12px;
+		color: grey;
+		/* These help position the date properly */
+		margin-top: 12px;
+		margin-bottom: 4px;
+	}
+
+	.textUnderDate {
+		/* This prevents the date from pushing the text too far down */
+		margin-top: 0;
+	}
+
+	.blacktext {
+		color: black;
+	}
+
+	img {
+		border-radius: 4px;
 	}
 
 	.title {
@@ -137,6 +160,7 @@
 	.content {
 		background-color: white;
 		padding: 10px;
+		border-radius: 4px;
 	}
 	/* Responsive layout - makes a two column-layout instead of four columns */
 
@@ -166,43 +190,68 @@
 			<p><a href='/'>Home</a>&emsp;&emsp;<a href='/prototypes'>Prototypes</p>
 			<div class='line'></div>
 			<div class='row'>
+				<!--Column-->
 				<div class='column'>
 					<div class='content'>
 						<a href='/solar-colony'>
 							<img src='./images/solar-colony.jpg' width='100%'>
 						</a>
-						<h3>Solar Colony <a href='https://github.com/qwertysam/solar-colony'><img class='github' src='./images/github.svg'></a></h3>
-						<p>WIP A PvP space colonization game.</p>
+						<h3>
+							<a href='/solar-colony' class='blacktext'>Solar Colony</a>
+							<a href='https://github.com/qwertysam/solar-colony'><img class='github' src='./images/github.svg'></a>
+						</h3>
+						<p class='date'>PRESENT</p>
+						<p class='textUnderDate'>WIP A PvP space colonization game.</p>
 					</div>
 				</div>
+				<!--Column-->
 				<div class='column'>
 					<div class='content'>
 						<img src='./images/reddit.png' width='100%'>
-						<h3>Reddit Bot <a href='https://github.com/qwertysam/reddit-comments-sql-storage'><img class='github' src='./images/github.svg'></a></h3>
-						<p>WIP A Tensorflow Reddit Chatbot in Python.</p>
+						<h3>
+							Reddit Bot
+							<a href='https://github.com/qwertysam/reddit-comments-sql-storage'><img class='github' src='./images/github.svg'></a>
+						</h3>
+						<p class='date'>FEB 2018</p>
+						<p class='textUnderDate'>RIP A Tensorflow Reddit Chatbot in Python.</p>
 					</div>
 				</div>
+				<!--Column-->
 				<div class='column'>
 					<div class='content'>
 						<a href='/space-game'>
 							<img src='./images/space-game.jpg' width='100%'>
 						</a>
-						<h3>Space Game <a href='https://github.com/qwertysam/space-game'><img class='github' src='./images/github.svg'></a></h3>
-						<p>RIP A space game made with Phaser 2.</p>
+						<h3>
+							<a href='/space-game' class='blacktext'>Space Game</a>
+							<a href='https://github.com/qwertysam/space-game'><img class='github' src='./images/github.svg'></a>
+						</h3>
+						<p class='date'>JUL 2017</p>
+						<p class='textUnderDate'>RIP A space game made with Phaser 2.</p>
 					</div>
 				</div>
+				<!--Column-->
 				<div class='column'>
 					<div class='content'>
 						<img src='./images/afroman2.png' width='100%'>
-						<h3>Afroman Refresh <a href='https://github.com/qwertysam/afroman-refresh'><img class='github' src='./images/github.svg'></a></h3>
-						<p>RIP A remake of the Afroman Engine using libGDX.</p>
+						<h3>
+							Afroman Refresh
+							<a href='https://github.com/qwertysam/afroman-refresh'><img class='github' src='./images/github.svg'></a>
+						</h3>
+						<p class='date'>MAY 2017</p>
+						<p class='textUnderDate'>RIP A remake of the Afroman Engine using libGDX.</p>
 					</div>
 				</div>
+				<!--Column-->
 				<div class='column'>
 					<div class='content'>
 						<img src='./images/afroman.png' width='100%'>
-						<h3>Afroman Engine <a href='https://github.com/qwertysam/afroman-client'><img class='github' src='./images/github.svg'></a></h3>
-						<p>RIP A 2D multiplayer video game engine in Java.</p>
+						<h3>
+							Afroman Engine
+							<a href='https://github.com/qwertysam/afroman-client'><img class='github' src='./images/github.svg'></a>
+						</h3>
+						<p class='date'>JAN 2017</p>
+						<p class='textUnderDate'>RIP A 2D multiplayer video game engine in Java.</p>
 					</div>
 				</div>
 			</div>

@@ -21,7 +21,7 @@
 		font-size: 24px;
 		text-align: center;
 
-		margin-top: 0.8em;
+		margin-top: 0.6em;
 		margin-bottom: -0.4em;
 	}
 
@@ -30,6 +30,29 @@
 		font-weight: 300;
 		font-size: 20px;
 		text-align: center;
+		margin-bottom: 8px;
+	}
+
+	.date {
+		font-weight: 500;
+		font-size: 12px;
+		color: grey;
+		/* These help position the date properly */
+		margin-top: 12px;
+		margin-bottom: 4px;
+	}
+
+	.textUnderDate {
+		/* This prevents the date from pushing the text too far down */
+		margin-top: 0;
+	}
+
+	.blacktext {
+		color: black;
+	}
+
+	img {
+		border-radius: 8px;
 	}
 
 	.title {
@@ -88,7 +111,7 @@
 	.github {
 		width: 24;
 		height: 24;
-		top: 3px;
+		top: 4px;
 		left: 3px;
 		position: relative;
 	}
@@ -137,6 +160,8 @@
 	.content {
 		background-color: white;
 		padding: 10px;
+		border-radius: 8px;
+		box-shadow: 0 0 8px 0 #D0D0D0;
 	}
 	/* Responsive layout - makes a two column-layout instead of four columns */
 
@@ -166,40 +191,60 @@
 			<p><a href='/'>Home</a>&emsp;&emsp;<a href='/prototypes'>Prototypes</a></p>
 			<div class='line'></div>
 			<div class='row'>
+				<!--Column-->
 				<div class='column'>
-					<div class='content'>
-						<a href='/math-website'>
-							<img src='/images/math.png' width='100%'>
-						</a>
-						<h3>LaTeX Editor <a href='https://github.com/qwertysam/math-website'><img class='github' src='./images/github.svg'></a></h3>
-						<p>A simple and easy online LaTeX editor. Just start typing.</p>
-					</div>
-				</div>
-				<div class='column'>
-					<div class='content'>
-						<a href='/shooty-game'>
-							<img src='/images/shooty.png' width='100%'>
-						</a>
-						<h3>Shooty <a href='https://github.com/qwertysam/shooty-game'><img class='github' src='./images/github.svg'></a></h3>
-						<p>Multiplayer keyboard reflex game! Play online or locally.</p>
-					</div>
-				</div>
-				<div class='column'>
-					<div class='content'>
+					<div class='content shadow'>
 						<a href='/web-remote-soundboard'>
 							<img src='./images/smoothie.png' width='100%'>
 						</a>
-						<h3>Smoothie <a href='https://github.com/qwertysam/web-remote-soundboard'><img class='github' src='./images/github.svg'></a></h3>
-						<p>A remote soundboard. Used for silly fun and pranks!</p>
+						<h3>
+							<a href='/web-remote-soundboard' class='blacktext'>Smoothie</a>
+							<a href='https://github.com/qwertysam/web-remote-soundboard'><img class='github' src='./images/github.svg'></a>
+						</h3>
+						<p class='date'>MAY 2018</p>
+						<p class='textUnderDate'>A remote soundboard. Used for silly fun and pranks!</p>
 					</div>
 				</div>
+				<!--Column-->
 				<div class='column'>
 					<div class='content'>
 						<a href='/equithon-game'>
 							<img src='./images/glucose.png' width='100%'>
 						</a>
-						<h3>Glucose Run <a href='https://github.com/qwertysam/equithon-game'><img class='github' src='./images/github.svg'></a></h3>
-						<p>A 48 hour hackathon game for diabetes awareness.</p>
+						<h3>
+							<a href='/equithon-game' class='blacktext'>Glucose Run</a>
+							<a href='https://github.com/qwertysam/equithon-game'><img class='github' src='./images/github.svg'></a>
+						</h3>
+						<p class='date'>MAY 2018</p>
+						<p class='textUnderDate'>A 48 hour hackathon game for diabetes awareness.</p>
+					</div>
+				</div>
+				<!--Column-->
+				<div class='column'>
+					<div class='content'>
+						<a href='/math-website'>
+							<img src='/images/math.png' width='100%'>
+						</a>
+						<h3>
+							<a href='/math-website' class='blacktext'>LaTeX Editor</a>
+							<a href='https://github.com/qwertysam/math-website'><img class='github' src='./images/github.svg'></a>
+						</h3>
+						<p class='date'>JAN 2018</p>
+						<p class='textUnderDate'>A simple and easy online LaTeX editor. Just start typing.</p>
+					</div>
+				</div>
+				<!--Column-->
+				<div class='column'>
+					<div class='content'>
+						<a href='/shooty-game'>
+							<img src='/images/shooty.png' width='100%'>
+						</a>
+						<h3>
+							<a href='/shooty-game' class='blacktext'>Shooty</a>
+							<a href='https://github.com/qwertysam/shooty-game'><img class='github' src='./images/github.svg'></a>
+						</h3>
+						<p class='date'>JUN 2017</p>
+						<p class='textUnderDate'>Multiplayer keyboard reflex game! Play online or locally.</p>
 					</div>
 				</div>
 			</div>
