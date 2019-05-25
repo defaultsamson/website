@@ -1,0 +1,192 @@
+body {
+	margin: 0;
+	padding: 20px;
+	background-color: #F4F4F4;
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 70px;
+	text-align: center;
+}
+
+h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	text-align: center;
+	margin-top: 0.6em;
+	margin-bottom: -0.4em;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.date {
+	font-weight: 500;
+	font-size: 12px;
+	color: grey;
+	/* These help position the date properly */
+	margin-top: 12px;
+	margin-bottom: 4px;
+}
+
+.textUnderDate {
+	/* This prevents the date from pushing the text too far down */
+	margin-top: 0;
+}
+
+.blacktext {
+	color: black;
+}
+
+img {
+	border-radius: 8px;
+}
+
+.title {
+	animation: fadeTitle 1.3s ease;
+	margin-top: 0.2em;
+	margin-bottom: -0.2em;
+}
+
+.rest {
+	position: relative;
+	animation: fadeRest 1.3s ease;
+}
+
+@keyframes fadeTitle {
+	0% {
+		opacity: 0;
+		transform: translateY(-40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeRest {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.line {
+	border-bottom: 2px solid #DDD;
+}
+
+.github {
+	width: 24;
+	height: 24;
+	top: 4px;
+	left: 3px;
+	position: relative;
+}
+
+.expand {
+	transition: 0.1s ease;
+	opacity: 0.5;
+}
+
+.expand:hover {
+	opacity: 1;
+	/** default scale is 1, so we don't need to specify that */
+	transform: scale(1.2, 1.2);
+}
+
+#mainGithub {
+	width: 32;
+	height: 32;
+	position: absolute;
+	top: -2px;
+}
+
+* {
+	box-sizing: border-box;
+}
+/* Center website */
+
+.main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+.row {
+	margin: 8px -16px;
+}
+/* Add padding BETWEEN each column */
+
+.row,
+.row>.column {
+	padding: 8px;
+}
+/* Create four equal columns that floats next to each other */
+
+.column {
+	float: left;
+	width: 33.333%;
+}
+/* Clear floats after rows */
+
+.row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+/* Content */
+
+.content {
+	background-color: white;
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 0 0 8px 0 #CCC;
+
+	transition: 0.1s ease;
+}
+
+.content:hover {
+	transform: scale(1.07, 1.07);
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+@media (max-width: 900px) {
+	.column {
+		width: 50%;
+	}
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media (max-width: 600px) {
+	.column {
+		width: 100%;
+	}
+}
