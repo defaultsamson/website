@@ -173,7 +173,7 @@ a:active {
 }
 
 .content:hover {
-	transform: scale(1.07, 1.07);
+	transform: scale(1.04, 1.04);
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
