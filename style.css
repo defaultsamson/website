@@ -28,26 +28,39 @@ p {
 	margin-bottom: 8px;
 }
 
+.name {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 26px;
+	text-anchor: middle;
+}
+
 .date {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+
 	font-weight: 500;
-	font-size: 12px;
-	color: grey;
-	/* These help position the date properly */
-	margin-top: 12px;
-	margin-bottom: 4px;
+	font-size: 14px;
+
+	fill: grey;
+	text-anchor: middle;
 }
 
-.textUnderDate {
-	/* This prevents the date from pushing the text too far down */
-	margin-top: 0;
+.cardText {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 22px;
+
+	text-anchor: middle;
 }
 
-.blacktext {
-	color: black;
+.noLinkCardImage {
+	padding-bottom: 4px;
 }
 
 img {
-	border-radius: 8px;
+	border-radius: 5px;
 }
 
 .title {
@@ -166,14 +179,14 @@ a:active {
 .content {
 	background-color: white;
 	padding: 10px;
-	border-radius: 8px;
+	border-radius: 5px;
 	box-shadow: 0 0 8px 0 #CCC;
 
 	transition: 0.1s ease;
 }
 
 .content:hover {
-	transform: scale(1.04, 1.04);
+	transform: scale(1.02, 1.02);
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
