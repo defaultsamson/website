@@ -1,5 +1,4 @@
 var output = document.getElementById("output")
-var error = document.getElementById("error")
 var conText = document.getElementById("conText")
 var button = document.getElementById("updateButton")
 button.disabled = true
@@ -20,14 +19,13 @@ function receive(json) {
 	if (json.update == 1) { // Update starts
 		button.disabled = true
 		output.innerHTML = ""
-		error.innerHTML = ""
 	} else if (json.update == 2) { // Update fails
 		button.disabled = false
 		failed = true
 	} else if (json.update == 3) { // Message update
 		output.innerHTML += "<li>" + json.message + "</li>"
 	} else if (json.update == 4) { // Error update
-		error.innerHTML += "<li>" + json.error + "</li>"
+		output.innerHTML += "<li style="color:red;">" + json.error + "</li>"
 	} else { // Update finished
 		if (!failed) {
 			button.disabled = false
