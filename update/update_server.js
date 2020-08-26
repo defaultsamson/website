@@ -7,6 +7,7 @@ const { spawn } = require("child_process")
 var port = 2398
 
 var wss
+var script
 
 function send(ws, json) {
 	ws.send(JSON.stringify(json))
@@ -15,7 +16,7 @@ function send(ws, json) {
 function update(ws) {
 	send(ws, { update: 1 })
 
-	const script = spawn("bash", [ "/home/samson/website/update/update.sh" ])
+	script = spawn("bash", [ "/home/samson/website/update/update.sh" ])
 
 	// Logs all the script output
 	script.stdout.on("data", (d) => {
@@ -58,14 +59,19 @@ function connect() {
 		ws.on("close", () => {})
 		ws.on("error", (e) => {})
 		ws.on("message", (msg) => {
-			update(ws)
-			/*
 			try {
 				let pack = JSON.parse(msg)
+				if (typeof pack.update !== 'undefined') {
+					update(ws)
+				} else {
+					// Input is defined
+					console.log("Input defined: " + pack.input)
+					script.stdin.write(pack.input)
+					script.stdin.end()
+				}
 			} catch (err) {
 
 			}
-			*/
 		})
 	})
 }

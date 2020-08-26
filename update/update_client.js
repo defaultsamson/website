@@ -1,7 +1,11 @@
 var output = document.getElementById("output")
 var conText = document.getElementById("conText")
 var button = document.getElementById("updateButton")
+var password = document.getElementById("password")
+var passwordButton = document.getElementById("passwordButton")
 button.disabled = true
+passwordButton.style.visibility = "hidden"
+password.style.visibility = "hidden"
 
 var ip = "samsonclo.se"
 var port = 2398
@@ -15,6 +19,12 @@ button.onclick = () => {
 	send({ update: 1 })
 }
 
+passwordButton.onclick = () => {
+	passwordButton.style.visibility = "hidden"
+	password.style.visibility = "hidden"
+	send({ input: password.value })
+}
+
 function receive(json) {
 	if (json.update == 1) { // Update starts
 		button.disabled = true
@@ -24,6 +34,11 @@ function receive(json) {
 		failed = true
 	} else if (json.update == 3) { // Message update
 		output.innerHTML += "<li>" + json.message + "</li>"
+		if (json.message.indexOf("Enter sudo password") == 0) {
+			console.log("showing12112")
+			password.style.visibility = "visible"
+			passwordButton.style.visibility = "visible"
+		}
 	} else if (json.update == 4) { // Error update
 		output.innerHTML += "<li style=\"color:red;\">" + json.error + "</li>"
 	} else { // Update finished
