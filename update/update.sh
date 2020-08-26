@@ -33,8 +33,6 @@ if [ $NEED_UPDATE = true ]; then
 	echo $PASSWORD | sudo -S systemctl restart sam-dicebot
 fi
 
-echo $PASSWORD | sudo -S systemctl restart sam-dicebot
-
 cd $BASE/quotebot
 echo Updating quotebot...
 updateRepo
