@@ -25,7 +25,7 @@ function receive(json) {
 	} else if (json.update == 3) { // Message update
 		output.innerHTML += "<li>" + json.message + "</li>"
 	} else if (json.update == 4) { // Error update
-		output.innerHTML += "<li style="color:red;">" + json.error + "</li>"
+		output.innerHTML += "<li style=\"color:red;\">" + json.error + "</li>"
 	} else { // Update finished
 		if (!failed) {
 			button.disabled = false
