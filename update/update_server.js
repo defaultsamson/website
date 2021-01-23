@@ -65,7 +65,7 @@ function connect() {
 					update(ws)
 				} else {
 					// Input is defined
-					console.log("Input defined: " + pack.input)
+					// console.log("Input defined: " + pack.input)
 					script.stdin.write(pack.input)
 					script.stdin.end()
 				}
